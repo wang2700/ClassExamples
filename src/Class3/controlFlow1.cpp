@@ -3,24 +3,24 @@
 int main() {
     int TARGET = 33;
     int guess;
-    std::cout<<"Guess a number between 0 - 100\n";
+    std::cout << "Guess a number between 0 - 100\n";
     
     while (1)
     {
-        std::cin>>guess;
+        std::cin >> guess;
     
-        std::cout<<"You guessed: "<<guess<<"\n";
+        std::cout<<"You guessed: " << guess << "\n";
         if(guess < TARGET)
         {
-            std::cout<<"Your guess is too low.\n";
+            std::cout << "Your guess is too low.\n";
         }
         else if(guess > TARGET)
         {
-            std::cout<<"Your guess is too high.\n";
+            std::cout << "Your guess is too high.\n";
         }
         else
         {
-            std::cout<<"Yay! You guessed correctly.\n";
+            std::cout << "Yay! You guessed correctly.\n";
             break;
         }
     }  
