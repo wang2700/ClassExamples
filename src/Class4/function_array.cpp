@@ -10,6 +10,8 @@ void arraySized(int array[3], int size);
 //Pass the array as an unsized array
 void arrayUnSized(int array[], int size);
 
+void print2DArray(int **array, int width, int height);
+
 int main()
 {
     const int size = 3;
@@ -28,7 +30,7 @@ int main()
     arrayAsPointer(array, size);
     arraySized(array, size);
     arrayUnSized(array, size);
-    print2DArray(img);
+    print2DArray(img, 3, 3);
     return 0;
 }
 
@@ -56,11 +58,8 @@ void arrayUnSized(int array[], int size)
     std::cout << "\n";  
 }
 
-void print2DArray(int **array)
+void print2DArray(int **array, int width, int height)
 {
-    int width = sizeof(array[0]) / sizeof(array[0][0]);
-    int height = sizeof(array) / sizeof(array[0]);
-
     for (int r = 0; r < height; r++) {
         for (int c = 0; c < width; c++) {
             std::cout << array[r][c] << "   ";
